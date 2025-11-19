@@ -1,0 +1,148 @@
+# Unsupervised Learning 
+
+## What Is Unsupervised Learning?
+Unsupervised learning deals with **unlabeled data**.  
+There are no target variables or correct answers.  
+The goal is to discover:
+- Hidden patterns  
+- Structures  
+- Relationships  
+
+Think of it as exploring unfamiliar data without guidance.
+
+---
+
+## How Unsupervised Learning Works
+Unsupervised algorithms analyze the data to:
+- Group similar items  
+- Reduce complexity  
+- Detect unusual patterns  
+
+Useful when labels are:
+- Missing  
+- Hard to obtain  
+- Expensive to create  
+
+Common tasks:
+1. **Clustering** – grouping similar points  
+2. **Dimensionality Reduction** – compressing data while keeping important information  
+3. **Anomaly Detection** – finding unusual or rare events  
+
+---
+
+## Core Concepts
+
+### Unlabeled Data
+- Data contains **features only**, no labels  
+- Algorithm must infer patterns on its own  
+- Example: grouping photos without descriptions  
+
+### Similarity Measures
+Used to determine how alike two points are.
+
+Common measures:
+
+#### Euclidean Distance
+Straight-line distance between two points.
+
+#### Cosine Similarity
+Measures angle between two vectors; useful for text data.
+
+#### Manhattan Distance
+Sum of absolute differences; useful for grid-like data.
+
+Choice depends on the data and algorithm.
+
+---
+
+## Clustering Tendency
+Before applying clustering, check whether the data **naturally forms clusters**.  
+If data is uniformly scattered, clustering may not be meaningful.
+
+---
+
+## Cluster Validity
+Evaluates how good the clusters are.
+
+Key metrics:
+
+### Cohesion
+- How similar points are **within** a cluster  
+- Higher cohesion → tighter clusters  
+
+### Separation
+- How different clusters are from **each other**  
+- Higher separation → more distinct clusters  
+
+Common validity indices:
+- Silhouette Score  
+- Davies–Bouldin Index  
+
+---
+
+## Dimensionality
+Number of features in the dataset.
+
+High dimensionality can lead to:
+- Sparse data  
+- Less meaningful distances  
+- Increased computation  
+- The “curse of dimensionality”  
+
+---
+
+## Intrinsic Dimensionality
+The **true underlying dimension** of the data, often smaller than the actual number of features.
+
+Dimensionality reduction techniques aim to:
+- Remove noise  
+- Keep the important structure  
+- Represent data in fewer dimensions  
+
+---
+
+## Anomaly vs. Outlier
+
+### Anomaly
+A data point that deviates significantly from expected behavior.  
+Often used in:
+- Fraud detection  
+- Network security  
+- Monitoring systems  
+
+### Outlier
+A point far from others.  
+May indicate:
+- Errors  
+- Rare events  
+- Interesting unusual patterns  
+
+Anomalies are typically context-aware; outliers are often a broader concept.
+
+---
+
+## Feature Scaling
+Important because many unsupervised methods rely on distance calculations.
+
+Common scaling techniques:
+
+### Min–Max Scaling
+Scales values to a range, typically [0, 1].
+
+### Standardization (Z-Score)
+Transforms data to:
+- Mean = 0  
+- Standard deviation = 1  
+
+Ensures that no feature dominates others due to scale differences.
+
+---
+
+## Summary
+Unsupervised learning:
+- Works with unlabeled data  
+- Discovers hidden structure  
+- Relies on similarity measures  
+- Involves clustering, dimensionality reduction, and anomaly detection  
+- Requires feature scaling and understanding of dimensionality  
+
