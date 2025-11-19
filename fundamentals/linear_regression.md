@@ -1,6 +1,6 @@
 <img width="685" height="548" alt="image" src="https://github.com/user-attachments/assets/1b0b8bfc-a79b-4128-a08a-80beb2d8fa93" />
 
-# Linear Regression (Simple Notes)
+# Linear Regression 
 
 ## What is Regression?
 Regression = predicting a **continuous number**, not a category.
