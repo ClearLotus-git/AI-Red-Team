@@ -39,6 +39,9 @@ invalid_ips = data[~data['source_ip'].astype(str).apply(is_valid_ip)]
 print(invalid_ips)
 ```
 
+<img width="907" height="631" alt="image" src="https://github.com/user-attachments/assets/709c9b59-8807-4cba-b466-baed19b7f973" />
+
+
 ### 2. **Invalid Port Numbers**
 
 ```python
@@ -52,6 +55,8 @@ def is_valid_port(port):
 invalid_ports = data[~data['destination_port'].apply(is_valid_port)]
 print(invalid_ports)
 ```
+<img width="890" height="565" alt="image" src="https://github.com/user-attachments/assets/e0e99406-4c5f-4930-9783-c0f701d21fc7" />
+
 
 ### 3. **Invalid Protocols**
 
@@ -60,6 +65,8 @@ valid_protocols = ['TCP', 'TLS', 'SSH', 'POP3', 'DNS', 'HTTPS', 'SMTP', 'FTP', '
 invalid_protocols = data[~data['protocol'].isin(valid_protocols)]
 print(invalid_protocols)
 ```
+<img width="883" height="339" alt="image" src="https://github.com/user-attachments/assets/d27a9dc9-4c98-44a2-b1a4-1b99ca24c0e5" />
+
 
 ### 4. **Invalid `bytes_transferred` Values**
 
@@ -74,6 +81,9 @@ invalid_bytes = data[~data['bytes_transferred'].apply(is_valid_bytes)]
 print(invalid_bytes)
 ```
 
+<img width="895" height="472" alt="image" src="https://github.com/user-attachments/assets/92a150f1-e315-44fc-a6f6-4b56617c3a91" />
+
+
 ### 5. **Invalid `threat_level` Entries**
 
 ```python
@@ -87,6 +97,9 @@ invalid_threat_levels = data[~data['threat_level'].apply(is_valid_threat_level)]
 print(invalid_threat_levels)
 ```
 
+<img width="912" height="507" alt="image" src="https://github.com/user-attachments/assets/c8bce588-949c-4090-aa74-75be4847c8f8" />
+
+
 ---
 
 ##  Dropping Invalid Entries
@@ -99,6 +112,7 @@ data = data.drop(invalid_bytes.index, errors='ignore')
 data = data.drop(invalid_threat_levels.index, errors='ignore')
 print(data.describe(include='all'))
 ```
+<img width="914" height="604" alt="image" src="https://github.com/user-attachments/assets/63902000-cafa-4552-9ffa-7f04b2e3826c" />
 
 ---
 
@@ -164,6 +178,7 @@ data['destination_port'] = data['destination_port'].clip(lower=0, upper=65535)
 ```python
 print(data.describe(include='all'))
 ```
+<img width="718" height="490" alt="image" src="https://github.com/user-attachments/assets/f613aa3f-f52a-4a0a-866c-75ed5c81a9ed" />
 
 ---
 
