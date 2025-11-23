@@ -74,3 +74,7 @@ These issues must be addressed **before training** a model to ensure accuracy an
 ### Tip:
 Always explore, clean, and validate your dataset **before modeling**. Reliable models start with reliable data.
 
+
+<img width="1186" height="714" alt="image" src="https://github.com/user-attachments/assets/a65b7a0d-3d02-4047-a954-7834c01a5736" />
+
+
