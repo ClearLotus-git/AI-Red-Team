@@ -1,1 +1,88 @@
+# Attacking Text Generation — OWASP Top 10 for LLM Applications (Summary)
+
+This document summarizes the **OWASP Top 10 security risks for Large Language Model (LLM) applications**, focusing on vulnerabilities specific to **text generation systems**.
+
+---
+
+## Overview
+LLMs introduce new security risks beyond traditional software vulnerabilities. While some risks overlap with general ML security concerns, others are unique to **prompt-driven, generative systems**.
+
+---
+
+## OWASP Top 10 LLM Risks
+
+### **LLM01 – Prompt Injection**
+Attackers manipulate LLM inputs (directly or indirectly) to override intended behavior, potentially causing harmful, illegal, or misleading outputs, or leaking sensitive data.
+
+---
+
+### **LLM02 – Sensitive Information Disclosure**
+LLMs may unintentionally reveal confidential data, including customer information or training data details. Risk increases when models are trained or fine-tuned on sensitive datasets.
+
+---
+
+### **LLM03 – Supply Chain Vulnerabilities**
+Security weaknesses may exist in:
+- Training data
+- Pre-trained models
+- Plugins or integrated services  
+These can lead to data leaks or intellectual property exposure.
+
+---
+
+### **LLM04 – Data & Model Poisoning**
+Attackers inject malicious or biased data into training sets, degrading model integrity or embedding backdoors. Mitigation requires dataset validation and supply-chain verification.
+
+---
+
+### **LLM05 – Improper Output Handling**
+LLM output must be treated as **untrusted input**. Failure to sanitize responses can lead to:
+- XSS
+- SQL injection
+- Command injection  
+All generated output should be validated against expected syntax and logic.
+
+---
+
+### **LLM06 – Excessive Agency**
+Over-privileged LLMs increase attack surface. Models should follow **least-privilege principles**, with strict controls over:
+- External services
+- Databases
+- System actions
+
+---
+
+### **LLM07 – System Prompt Leakage**
+Attackers may coerce LLMs into revealing system prompts, exposing internal logic, permissions, or sensitive instructions—often a precursor to deeper exploitation.
+
+---
+
+### **LLM08 – Vector & Embedding Weaknesses**
+In Retrieval-Augmented Generation (RAG) systems:
+- Poisoned embeddings can manipulate responses
+- Poorly protected vector stores may leak sensitive data
+
+---
+
+### **LLM09 – Misinformation**
+LLMs may hallucinate false but convincing information, including fabricated sources or buggy code. Overreliance on outputs can lead to real-world harm or insecure implementations.
+
+---
+
+### **LLM10 – Unbounded Consumption**
+LLMs are vulnerable to denial-of-service via resource-intensive prompts. Risks include:
+- Service disruption
+- Excessive cloud costs
+- Model theft via large-scale query harvesting  
+Mitigations include rate limiting, monitoring, and resource controls.
+
+---
+
+## Key Takeaway
+LLM security requires:
+- Strong input/output validation
+- Least-privilege design
+- Data integrity controls
+- Monitoring and rate limits  
+LLMs should be treated as **powerful but untrusted components** within a secure system architecture.
 
