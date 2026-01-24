@@ -60,3 +60,5 @@ This module focuses on:
 >  Treat LLM output with the same caution as user input — validate, sanitize, and escape depending on the context.
 
 https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/
+
+https://saif.google/secure-ai-framework/risks
