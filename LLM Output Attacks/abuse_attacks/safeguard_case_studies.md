@@ -58,3 +58,4 @@ Both Model Armor and ShieldGemma act as **protective layers around LLM systems**
 - **ShieldGemma:** specialized LLM that evaluates prompts against safety policies.
 
 While effective for detecting harassment and harmful content, these safeguards **do not directly detect misinformation**, highlighting the need for additional monitoring and verification systems.
+
