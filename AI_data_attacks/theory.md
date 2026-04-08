@@ -231,3 +231,8 @@ But cannot distinguish:
 - Model files can execute code, not just store weights
 - Traditional perimeter security is insufficient
 - Continuous monitoring is required to detect subtle attacks
+
+Images:
+
+<img width="1169" height="417" alt="image" src="https://github.com/user-attachments/assets/d71ca4f9-e0b2-45c5-98ee-c5bffce73538" />
+[ Pipeline stage and corresponding attack type ]
